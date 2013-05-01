@@ -12,15 +12,15 @@ FileETag All
 	</IfModule>
 </IfModule>
 
-# Cache, aggressively 
-<IfModule mod_expires.c>
-  ExpiresActive On
-  ExpiresDefault "access plus 10 days"
-
-	<FilesMatch "\.(eot|ttf|otf)$">
-		ExpiresDefault "access plus 10 years"
-	</filesMatch>
-</IfModule>
+# Cache, aggressively
+# <IfModule mod_expires.c>
+#   ExpiresActive On
+#   ExpiresDefault "access plus 10 days"
+#
+# 	<FilesMatch "\.(eot|ttf|otf)$">
+# 		ExpiresDefault "access plus 10 years"
+# 	</filesMatch>
+# </IfModule>
 
 # Mime-types
 AddType application/vnd.ms-fontobject .eot
