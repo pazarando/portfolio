@@ -1,0 +1,150 @@
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/* Internet Explorer 7 does a horrible job of scaling images
+   the following CSS snippet cures that. */
+img {
+  -ms-interpolation-mode: bicubic; }
+
+.cf, .main-wrapper {
+  *zoom: 1; }
+  .cf:before, .main-wrapper:before, .cf:after, .main-wrapper:after {
+    content: " ";
+    /* 1 */
+    display: table;
+    /* 2 */ }
+  .cf:after, .main-wrapper:after {
+    clear: both; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #ECECEC; }
+
+.main-wrapper {
+  width: 692px;
+  width: 970px;
+  margin: 15px auto 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -485px;
+  margin-top: -286px; }
+
+header {
+  float: left;
+  display: inline-block;
+  width: 278px;
+  height: 242px;
+  background-repeat: no-repeat;
+  background-image: url("/img/header.png"); }
+  header a {
+    display: inline-block;
+    height: 25px;
+    margin-top: 208px; }
+    header a.twitter {
+      margin-left: 20px;
+      width: 58px; }
+    header a.linkedin {
+      margin-left: 17px;
+      width: 71px; }
+    header a.flickr {
+      margin-left: 17px;
+      width: 58px; }
+
+section {
+  float: left;
+  position: relative;
+  display: inline-block;
+  margin-top: 14px;
+  width: 414px;
+  height: 558px; }
+
+.item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 538px;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: visibility 0s linear 1s, opacity 1s linear;
+  -moz-transition: visibility 0s linear 1s, opacity 1s linear;
+  -ms-transition: visibility 0s linear 1s, opacity 1s linear;
+  -o-transition: visibility 0s linear 1s, opacity 1s linear;
+  transition: visibility 0s linear 1s, opacity 1s linear; }
+  .item img {
+    width: 100%;
+    height: 100%; }
+  .item aside {
+    position: absolute;
+    right: 100%;
+    bottom: 0;
+    width: 278px;
+    height: 169px;
+    padding: 12px 24px 22px 10px;
+    background-repeat: no-repeat;
+    background-image: url("/img/description.png"); }
+  .item.active {
+    visibility: visible;
+    opacity: 1;
+    -webkit-transition-delay: 0s;
+    -moz-transition-delay: 0s;
+    -o-transition-delay: 0s;
+    transition-delay: 0s; }
+
+.paginator {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 0 123px 0 136px;
+  width: 100%;
+  height: 20px;
+  cursor: default;
+  background-repeat: no-repeat;
+  background-image: url("/img/pagination.png"); }
+  .paginator .pitem {
+    display: inline-block;
+    cursor: pointer;
+    height: 20px; }
+    .paginator .pitem.btn-1 {
+      width: 14px; }
+    .paginator .pitem.btn-2 {
+      width: 11px; }
+    .paginator .pitem.btn-3 {
+      width: 11px; }
+    .paginator .pitem.btn-4 {
+      width: 14px; }
+    .paginator .pitem.btn-5 {
+      width: 12px; }
+    .paginator .pitem.btn-6 {
+      width: 17px; }
+    .paginator .pitem.btn-7 {
+      width: 14px; }
+    .paginator .pitem.btn-8 {
+      width: 13px; }
+    .paginator .pitem.btn-9 {
+      width: 16px; }
+    .paginator .pitem:hover, .paginator .pitem.active {
+      background-repeat: no-repeat;
+      background-image: url("/img/pagination-hover.png"); }
+      .paginator .pitem:hover.btn-1, .paginator .pitem.active.btn-1 {
+        background-position: -136px 0; }
+      .paginator .pitem:hover.btn-2, .paginator .pitem.active.btn-2 {
+        background-position: -154px 0; }
+      .paginator .pitem:hover.btn-3, .paginator .pitem.active.btn-3 {
+        background-position: -170px 0; }
+      .paginator .pitem:hover.btn-4, .paginator .pitem.active.btn-4 {
+        background-position: -183px 0; }
+      .paginator .pitem:hover.btn-5, .paginator .pitem.active.btn-5 {
+        background-position: -202px 0; }
+      .paginator .pitem:hover.btn-6, .paginator .pitem.active.btn-6 {
+        background-position: -218px 0; }
+      .paginator .pitem:hover.btn-7, .paginator .pitem.active.btn-7 {
+        background-position: -239px 0; }
+      .paginator .pitem:hover.btn-8, .paginator .pitem.active.btn-8 {
+        background-position: -257px 0; }
+      .paginator .pitem:hover.btn-9, .paginator .pitem.active.btn-9 {
+        background-position: -274px 0; }

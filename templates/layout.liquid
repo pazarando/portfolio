@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Paz Arando</title>
+    <link rel="stylesheet" href="/css/styles.css" type="text/css">
+    <!--[if IE]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <header>
+        <a target="_blank" class="twitter" href="http://twitter.com/pazadeuva"></a>
+        <a target="_blank" class="linkedin" href="http://www.linkedin.com/profile/view?id=111782746&trk=tab_pro"></a>
+        <a target="_blank" class="flickr" href="http://www.flickr.com/photos/pazarando/"></a>
+      </header>
+      <section>
+        {% for trabajo in trabajos %}
+          <article class="item{% if forloop.first %} active{% endif %}">
+            <img src="/img/trabajos/{{forloop.index}}.jpg" title="{{trabajo.name}}">
+            <aside>{{trabajo.description}}</aside>
+          </article>
+        {% endfor %}
+        <div class="paginator">
+          {% for trabajo in trabajos %}
+            <span class="pitem btn-{{forloop.index}}{% if forloop.first %} active{% endif %}"></span>
+          {% endfor %}
+        </div>
+      </section>
+    </div>
+    <script src="/js/jquery-1.9.1.js"></script>
+    <script src="/js/jquery.cssSlider.js"></script>
+    <script type="text/javascript">
+      $('section').cssSlider({ timer: 5000 })
+    </script>
+  </body>
+</html>
